@@ -1,18 +1,28 @@
+$relative : relative
+$bold : bold
+
+#search {
+	border-radius : 2em;
+	text-align : center;
+	outline : none;
+}
+
 #unfiltered {
-	position : relative;
+	position : $relative;
 	border-radius : 2em;
 	background-image : linear-gradient(to right, #A9D0F5 35%, #0040FF );
 	margin-top : 10px;
 	margin-bottom : 10px;
 }
 
-#company, #data {
-	position : relative;
+#company {
+	position : $relative;
 	left : 35px;
-	font-weight : bold;
+	font-weight : $bold;
 }
 
 #data {
+	@extend #company
 	font-style : italic;
 	opacity : .5;
 }
@@ -26,7 +36,7 @@
 }
 
 #chartData {
-	font-weight : bold;
+	font-weight : $bold;
 }
 
 #chartdiv {
@@ -40,14 +50,12 @@
 }
 
 #selectElement {
-	font-weight : bold;
+	font-weight : $bold;
 	background-color : #A4A4A4;
 	font-size : 18px;
 	color : #B40404;
 }
 
-#search, #searchField {
-	border-radius : 2em;
-	text-align : center;
-	outline : none;
+#searchField {
+	@extend #search
 }

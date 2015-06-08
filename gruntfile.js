@@ -37,11 +37,24 @@ module.exports = function(grunt) {
 					cwd : process.cwd()
 				}]
 		    }
+		},
+		sass : {
+			options : {
+				map : true
+			},
+			main : {
+				expand : true,
+				src : 'public/css/*.scss',
+				dest : process.cwd(),
+				ext : '.css',
+				cwd : process.cwd(),
+			}
 		}
 	})
 
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('csswring');
 	grunt.loadNpmTasks('grunt-processhtml')
-	grunt.registerTask('default', ['uglify', 'csswring', 'processhtml'])
+	grunt.loadNpmTasks('grunt-sass')
+	grunt.registerTask('populate', ['sass', 'uglify', 'csswring', 'processhtml'])
 }

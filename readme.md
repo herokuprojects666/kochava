@@ -1,8 +1,9 @@
-The app runs on nodeJS/NPM so if you dont' have that installed you need to grab NodeJS.
+The app runs on nodeJS/NPM so if you dont' have that installed you need to grab NodeJS. After you have Node follow these steps to get up and running :
 
-To install locally, grab the remote repository from the command line with : [code]git clone https://github.com/herokuprojects666/kochava[/code]. After you have the repo, navigate to it and run the command npm install. This will install all the project dependencies. There is a local, development version with unminified files. As soon as you're ready to build the production version of the app, run grunt default. This will generate all the js/css/view files @ the /gen directory.
+1) Grab the repository with git clone. Enter git clone https://github.com/herokuprojects666/kochava.git on the node cli
+2) Navigate to the folder where you cloned the repo. Run grunt populate. This will generate css files from the scss as well as populate the /gen directory with with minified css/js for use in production
 
-To run the app in any mode type in node index.js on the command line. To run it in production mode type in NODE_ENV=production node index.js . This will run the app with all the minified files located in /gen directory.
+To run the app type in node index.js on the command line. To run it in production mode type in NODE_ENV=production node index.js . This will run the app with all the minified files located in /gen directory.
 
 This app was built with underscorejs, nodejs, expressjs, grunt, mongodb, with minimal support from other libraries.
 

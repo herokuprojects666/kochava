@@ -12,7 +12,8 @@ require(['./requireConfig'], function (config) {
 					}
 				})
 
-				//test case for backend API. Would have moved into jasmine test if I had more time.
+				//test case for backend API.
+				//Todo move into jasmine async test.
 
 				// $.ajax({
 				// 	url : '/clientApi',

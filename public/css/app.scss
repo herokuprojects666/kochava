@@ -1,11 +1,18 @@
 $relative : relative;
 $bold : bold;
 
+.company {
+	position : $relative;
+	left : 35px;
+	font-weight : $bold;
+}
+
 #search {
 	border-radius : 2em;
 	text-align : center;
 	outline : none;
 }
+
 
 #unfiltered {
 	position : $relative;
@@ -15,19 +22,15 @@ $bold : bold;
 	margin-bottom : 10px;
 }
 
-#company {
-	position : $relative;
-	left : 35px;
-	font-weight : $bold;
-}
 
 #data {
-	@extend #company;
+	@extend .company;
 	font-style : italic;
 	opacity : .5;
 }
 
 #company {
+	@extend .company;
 	margin-top : 5px;
 	left : 45px;
 	background-color : red;

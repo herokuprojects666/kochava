@@ -9,9 +9,9 @@ module.exports = function(grunt) {
 				files : [{
 					expand : true,
 					src : 'public/js/*.js',
-					dest : '/kochava/gen/',
+					dest : process.cwd() + '/gen/',
 					ext : '.js',
-					cwd : '/kochava/'
+					cwd : process.cwd()
 				}]
 			}
 		},
@@ -22,9 +22,9 @@ module.exports = function(grunt) {
 			main : {
 				expand : true,
 				src : 'public/css/*.css',
-				dest : '/kochava/gen/',
+				dest : process.cwd() + '/gen/',
 				ext : '.css',
-				cwd : '/kochava/'
+				cwd : process.cwd()
 			}
 		},
 		processhtml: {
@@ -32,8 +32,9 @@ module.exports = function(grunt) {
 				files : [{
 					expand : true,
 					src : 'views/*.hbs',
-					dest : '/kochava/gen/',
+					dest : process.cwd() + '/gen/',
 					ext : '.hbs',
+					cwd : process.cwd()
 				}]
 		    }
 		}
@@ -43,5 +44,4 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('csswring');
 	grunt.loadNpmTasks('grunt-processhtml')
 	grunt.registerTask('default', ['uglify', 'csswring', 'processhtml'])
-	grunt.registerTask('html', ['processhtml'])
 }

@@ -1,0 +1,31 @@
+{
+  "name": "kochava",
+  "version": "1.0.0",
+  "description": "Kochava Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Kochava"
+  ],
+  "author": "Craggoo",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.12.4",
+    "consolidate": "^0.13.1",
+    "express": "^4.12.4",
+    "grunt": "^0.4.5",
+    "handlebars": "^3.0.3",
+    "jade": "^1.10.0",
+    "logger": "0.0.1",
+    "mongodb": "1.4.29",
+    "morgan": "^1.5.3",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "csswring": "^3.0.5",
+    "grunt-contrib-uglify": "^0.9.1",
+    "grunt-processhtml": "^0.3.7"
+  }
+}

@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+	<head>
+		<script src='/js/require.js'></script>
+		<script src='/js/requireConfig.js'></script>
+		<script src='/js/main.js'></script>
+		<link rel='stylesheet' href='/css/bootstrap.css'>
+		<link rel='stylesheet' href='/css/app.css'>
+	</head>
+	<body >
+		<div class='row'>
+			<div class='col-md-3 col-md-offset-9'>
+				<div class='col-md-8'>
+					<input  id='searchField' data-bind="value : searchTerm, valueUpdate : 'afterkeydown'" placeholder = 'App Name'>
+					<button id='search' data-bind="click : search"> Search </button>
+				</div>
+				<div class='col-md-4'>
+					<select id='selectElement' data-bind="options : deviceList, click : filter, selectedOptions : selectedDevice, valueUpdate : onmouseup"></select>
+				</div>
+			</div>
+		</div>
+		<div class='row' data-bind="value : finalDevice">
+			<div data-bind="if : finalDevice">
+				<div class = 'row' data-bind="foreach : filteredByDeviceList">
+					<div id='unfiltered'>
+						<div class='row' id='data'>
+							<div class='col-md-3' data-bind="text : 'Platform : ' + $data.platform"> </div>
+							<div class='col-md-3' data-bind="text : 'App Id : ' + $data.id"> </div>
+							<div class='col-md-3' data-bind="text : 'App Name : ' + $data.name"> </div>
+							<div class='col-md-3' data-bind="text : 'Registered : ' + $data.registered"> </div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<div class='row' data-bind='value : searchQuery'>
+			<div data-bind="ifnot : searchQuery">
+				<div class='row' data-bind=" foreach : companyNames">
+					<div class='row' id='company' data-bind="text : $data.name"></div>
+					<div id='unfiltered'>
+
+						<div class = 'row' id='data' data-bind="foreach : $data.apps">
+							<div class='col-md-3' data-bind="text : 'Platform : ' + $data.platform"> </div>
+							<div class='col-md-3' data-bind="text : 'App Id : ' + $data.id"> </div>
+							<div class='col-md-3' data-bind="text : 'App Name : ' + $data.name"> </div>
+							<div class='col-md-3' data-bind="text : 'Registered : ' + $data.registered"> </div>
+						</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class='row' data-bind='value : searchQuery'>
+			<div data-bind="if : searchQuery">
+				<div class = 'row' data-bind="foreach : filteredList">
+					<div id='unfiltered'>
+						<div class='row' id='data'>
+							<div class='col-md-3' data-bind="text : 'Platform : ' + $data.platform"> </div>
+							<div class='col-md-3' data-bind="text : 'App Id : ' + $data.id"> </div>
+							<div class='col-md-3' data-bind="text : 'App Name : ' + $data.name"> </div>
+							<div class='col-md-3' data-bind="text : 'Registered : ' + $data.registered"> </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

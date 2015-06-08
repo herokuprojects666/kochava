@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+	<head>
+		<script src='/js/require.js'></script>
+		<script src='/js/requireConfig.js'></script>
+		<script src='/js/amCharts.js'></script>
+		<script src="js/serial.js"></script>
+		<link rel='stylesheet' href='/css/bootstrap.css'>
+		<link rel='stylesheet' href='/css/app.css'>
+		<script src='/js/chartMain.js'></script>
+	</head>
+	<div class='row'>
+		<div class='col-md-1' id='data'> Data Field : </div>
+		<div class='col-md-1'>
+			<select id='selectElement' data-bind="options : mappedFields, selectedOptions : selectedField, valueUpdate : onmouseup "></select>
+		</div>
+		<div class='col-md-1' id='data'> Chart Type : </div>
+		<div class='col-md-1'>
+			<select id='selectElement' data-bind="options : chartTypes, selectedOptions : selectedChartType, valueUpdate : onmouseup"></select>
+		</div>
+	</div>
+	<div data-bind="value : finalField">
+		<div data-bind="if : finalField">
+			<div id='miscData'>
+				<div class='row'>
+					<div class='col-md-2' id='data'> Peak Activity :</div>
+					<div class='col-md-2' data-bind="text : maxActivity", id='chartData'></div>
+					<div class='col-md-2' data-bind="text : selectedField() + ' : ' " id='data'></div>
+					<div class='col-md-2' data-bind="text : maxValue" id='chartData'></div>
+				</div>
+				<div class='row'>
+					<div id='chartdiv' ></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</html>

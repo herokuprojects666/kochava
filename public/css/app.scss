@@ -1,5 +1,5 @@
-$relative : relative
-$bold : bold
+$relative : relative;
+$bold : bold;
 
 #search {
 	border-radius : 2em;
@@ -22,7 +22,7 @@ $bold : bold
 }
 
 #data {
-	@extend #company
+	@extend #company;
 	font-style : italic;
 	opacity : .5;
 }
@@ -57,5 +57,5 @@ $bold : bold
 }
 
 #searchField {
-	@extend #search
+	@extend #search;
 }

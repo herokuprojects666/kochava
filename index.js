@@ -28,7 +28,6 @@ app.use(function (req, res, next) {
 })
 
 app.set('port', process.env.PORT || 4000)
-app.set('views', process.cwd() + '/views')
 app.engine('hbs', engines.handlebars)
 app.set('view engine', 'hbs')
 app.use(logger('dev'))

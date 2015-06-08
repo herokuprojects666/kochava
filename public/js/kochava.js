@@ -72,7 +72,8 @@ define(['underscore', 'knockout', 'jquery'], function(_, ko, $) {
 	}
 
 	// Used to read contents of the provided JSON files and upload them to the database
-	var getJSON = function(route) {
+
+	var readJSON = function(route) {
 		var reader = new FileReader;
 		reader.onload = function() {
 			var d = $.parseJSON(this.result);

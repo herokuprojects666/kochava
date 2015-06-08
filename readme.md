@@ -1,6 +1,6 @@
 The app runs on nodeJS/NPM so if you dont' have that installed you need to grab NodeJS.
 
-To install locally, grab the remote repository from the command line with : git clone https://github.com/craggoo/test. After you have the repo, navigate to it and run the command npm install. This will install all the project dependencies. There is a local, development version with unminified files. As soon as you're ready to build the production version of the app, run grunt default. This will generate all the js/css/view files @ the /gen directory.
+To install locally, grab the remote repository from the command line with : git clone https://github.com/herokuprojects666/kochava. After you have the repo, navigate to it and run the command npm install. This will install all the project dependencies. There is a local, development version with unminified files. As soon as you're ready to build the production version of the app, run grunt default. This will generate all the js/css/view files @ the /gen directory.
 
 To run the app in any mode type in node index.js on the command line. To run it in production mode type in NODE_ENV=production node index.js . This will run the app with all the minified files located in /gen directory.
 

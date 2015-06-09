@@ -10,8 +10,6 @@ To run the app type in any mode, type node index.js on the command line.
 
 To run the app in production mode type in NODE_ENV=production node index.js . This will run the app with all the minified files located in /gen directory. Note : make sure to run grunt populate if you haven't yet otherwise the required files won't exist!
 
-This app was built with underscorejs, nodejs, expressjs, grunt, mongodb, with minimal support from other libraries.
-
 The app search page is located at the root URL (/)
 
 The chart page is located at /chart

@@ -6,6 +6,6 @@ The app runs on nodeJS/NPM so if you dont' have that installed you need to grab 
 
 3) Run grunt populate. This will generate css files from the scss as well as populate the /gen directory with with minified css/js for use in production
 
-To run the app type in any mode, type node index.js on the command line.
+To run the app in any mode type node index.js on the command line.
 
 To run the app in production mode type in NODE_ENV=production node index.js . This will run the app with all the minified files located in /gen directory. Note : make sure to run grunt populate if you haven't yet otherwise the required files won't exist!

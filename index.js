@@ -13,8 +13,10 @@ var mongo = require('mongodb').MongoClient
 	engines = require('consolidate')
 	routes = require('./routes')
 	_ = require('underscore')
+
 var app = express()
 app.locals.appTitle = 'Kochava App'
+var corsOptions = {credentials: true, origin: true}
 
 app.use(function (req, res, next) {
 	if (app.get('env') == 'production') {
@@ -43,6 +45,13 @@ app.use(function (req, res, next) {
 		return new error('no collection found')
 	}
 	req.collections = collections
+	return next()
+})
+
+app.use(function(req, res, next) {
+	res.set('Access-Control-Allow-Origin', '*')
+	res.set('Access-Control-Allow-Methods', 'get')
+	res.set('Access-Control-Allow-Headers', "x-requested-with, content-type, accept")
 	return next()
 })
 

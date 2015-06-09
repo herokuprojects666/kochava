@@ -7,7 +7,7 @@ require(['./requireConfig'], function () {
 					method : 'post',
 					success : function(data) {
 						sessionStorage.setItem('kochavaChart', JSON.stringify(data))
-						return ko.applyBindings(new kochava.chartViewModel());
+						return ko.applyBindings(new kochava.chartViewModel('#miscData'));
 					}
 				})
 			})

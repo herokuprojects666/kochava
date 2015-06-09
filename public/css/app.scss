@@ -1,5 +1,6 @@
 $relative : relative;
 $bold : bold;
+$ten : 10px;
 
 .company {
 	position : $relative;
@@ -50,6 +51,11 @@ $bold : bold;
 #miscData {
 	margin-top : 20px;
 	margin-bottom : 10px;
+}
+
+#miscData > div {
+	margin-top : $ten;
+	margin-bottom : $ten;
 }
 
 #selectElement {

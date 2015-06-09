@@ -8,7 +8,7 @@ The app runs on nodeJS/NPM so if you dont' have that installed you need to grab 
 
 4) To run the app in any mode type node index.js on the command line. To run the app in production mode type in NODE_ENV=production node index.js . This will run the app with all the minified files located in /gen directory. Note : make sure to run grunt populate if you haven't yet otherwise the required files won't exist!
 
-5) To run the testing suite you will need to open up two terminals. In the first, start the server like normal with node index.js. In the second, run the command karma start. This will run the test suite that is located at public/js/kochavaSpec.js (or in the case of the production version, /gen/public/js/kochavaSpec.js).
+5) To run the testing suite you will need to open up two terminals. In the first, start the server like normal with node index.js. In the second, run the command karma start. This will run the test suite that is located at public/js/kochavaSpec.js (or in the case of the production version, gen/public/js/kochavaSpec.js).
 
 
 

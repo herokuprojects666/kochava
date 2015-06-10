@@ -20,7 +20,10 @@ $it : italic;
 	font-weight : $bold;
 	font-style : $it
 }
-
+#slogan {
+	position : absolute;
+	left : 340px;
+}
 #search {
 	position : $relative;
 	border-radius : 2em;

@@ -9,6 +9,7 @@
 	</head>
 	<body >
 		<div class='row'>
+			<image id='kochava', src='/images/kochava.png'>
 			<div class='col-md-3 col-md-offset-9'>
 				<div class='col-md-8'>
 					<input  id='searchField' data-bind="value : searchTerm, valueUpdate : 'afterkeydown'" placeholder = 'App Name'>
@@ -19,7 +20,7 @@
 				</div>
 			</div>
 		</div>
-		<div class='row' data-bind="value : finalDevice">
+		<div class='row' data-bind="value : finalDevice" id='pageTop'>
 			<div data-bind="if : finalDevice">
 				<div class = 'row' data-bind="foreach : filteredByDeviceList">
 					<div id='unfiltered'>
@@ -34,7 +35,7 @@
 			</div>
 
 		</div>
-		<div class='row' data-bind='value : searchQuery'>
+		<div class='row' data-bind='value : searchQuery' id='pageTop'>
 			<div data-bind="ifnot : searchQuery">
 				<div class='row' data-bind=" foreach : companyNames">
 					<div class='row' id='company' data-bind="text : $data.name"></div>

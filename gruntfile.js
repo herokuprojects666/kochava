@@ -49,6 +49,14 @@ module.exports = function(grunt) {
 				ext : '.css',
 				cwd : process.cwd(),
 			}
+		},
+		copy : {
+			main : {
+				expand : true,
+				src : 'public/images/*',
+				dest : process.cwd() + '/gen',
+				cwd : process.cwd()
+			}
 		}
 	})
 
@@ -56,5 +64,8 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('csswring');
 	grunt.loadNpmTasks('grunt-processhtml')
 	grunt.loadNpmTasks('grunt-sass')
-	grunt.registerTask('populate', ['sass', 'uglify', 'csswring', 'processhtml'])
+	grunt.loadNpmTasks('grunt-contrib-copy')
+	grunt.registerTask('populate', ['sass', 'uglify', 'csswring', 'processhtml', 'copy'])
+	grunt.registerTask('populateCss', ['sass'])
+	grunt.registerTask('populateImage', ['copy'])
 }

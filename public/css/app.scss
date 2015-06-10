@@ -1,6 +1,7 @@
 $relative : relative;
 $bold : bold;
 $ten : 10px;
+$absolute : absolute;
 
 .company {
 	position : $relative;
@@ -8,10 +9,21 @@ $ten : 10px;
 	font-weight : $bold;
 }
 
+#pageTop {
+	position : $relative;
+	top : 50px;
+}
+
 #search {
+	position : $relative;
 	border-radius : 2em;
 	text-align : center;
 	outline : none;
+	top : $ten;
+}
+
+#kochava {
+	position : $absolute;
 }
 
 
@@ -63,6 +75,8 @@ $ten : 10px;
 	background-color : #A4A4A4;
 	font-size : 18px;
 	color : #B40404;
+	position : $relative;
+	top : $ten
 }
 
 #searchField {

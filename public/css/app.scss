@@ -2,6 +2,7 @@ $relative : relative;
 $bold : bold;
 $ten : 10px;
 $absolute : absolute;
+$it : italic;
 
 .company {
 	position : $relative;
@@ -12,6 +13,12 @@ $absolute : absolute;
 #pageTop {
 	position : $relative;
 	top : 50px;
+}
+
+#textElement {
+	font-size : 30px;
+	font-weight : $bold;
+	font-style : $it
 }
 
 #search {
@@ -26,6 +33,12 @@ $absolute : absolute;
 	position : $absolute;
 }
 
+#svg {
+	position : $absolute;
+	top : 20px;
+	height : 100px;
+	width : 400px;
+}
 
 #unfiltered {
 	position : $relative;
@@ -38,7 +51,7 @@ $absolute : absolute;
 
 #data {
 	@extend .company;
-	font-style : italic;
+	font-style : $it;
 	opacity : .5;
 }
 
